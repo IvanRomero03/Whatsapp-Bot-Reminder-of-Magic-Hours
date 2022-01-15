@@ -2,9 +2,9 @@ import time
 from twilio.rest import Client
 
 # Your Account SID from twilio.com/console
-account_sid = "AC6c181e01332055220e0940113d80e89b"
+account_sid = ""
 # Your Auth Token from twilio.com/console
-auth_token = "5d7359a7af252f0f35c82ea94c967f6e"
+auth_token = ""
 
 client = Client(account_sid, auth_token)
 
@@ -40,7 +40,7 @@ while(True):
             mensaje = localtime.tm_hour % 12 + ":" + localtime.tm_min
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
-                to='whatsapp:+5216461617687',
+                to='whatsapp:',
                 body=mensaje
             )
             print(message.sid)
